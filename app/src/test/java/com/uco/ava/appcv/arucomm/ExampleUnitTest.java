@@ -1,4 +1,4 @@
-package com.uco.ava.appcv.arucomm;
+package com.uco.avaappbeta;
 
 import org.junit.Test;
 

@@ -6,7 +6,7 @@ android {
     String OPENCV_DIR_jni = OPENCV_DIR + '/sdk/native/jni'
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.uco.ava.appcv.arucomm"
+        applicationId "com.uco.avaappbeta"
         minSdkVersion 22
         targetSdkVersion 27
         versionCode 2

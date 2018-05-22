@@ -1,4 +1,4 @@
-package com.uco.ava.appcv.arucomm;
+package com.uco.avaappbeta;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.uco.ava.appcv.arucomm", appContext.getPackageName());
+        assertEquals("com.uco.avaappbeta", appContext.getPackageName());
     }
 }

@@ -4,7 +4,7 @@
     android:key="preferencias_principal" >
     <PreferenceCategory  android:title="Resolution"/>
 
-    <com.uco.ava.appcv.arucomm.AvailableResolutions
+    <com.uco.avaappbeta.AvailableResolutions
         android:key="resolucion"
         android:title="Available resolutions"
         android:summary="Choose a camera resolution"
@@ -51,21 +51,21 @@
         android:defaultValue="true"
         />
 
-    <com.uco.ava.appcv.arucomm.SendParamsFile
+    <com.uco.avaappbeta.SendParamsFile
         android:key="calibrated_resolutions"
         android:title="Calibrated resolutions"
         android:summary="Read and send camera parametres of calibrated resolutions"
         android:defaultValue="1"/>
 
-    <com.uco.ava.appcv.arucomm.SendTestFiles
+    <com.uco.avaappbeta.SendTestFiles
         android:title="Get necessary files"
         android:summary="Open calibration grid and markers images"/>
 
-    <com.uco.ava.appcv.arucomm.OpenTutorial
+    <com.uco.avaappbeta.OpenTutorial
         android:title="Open tutorial"
         android:summary="If you have forgotten something, you can see tutorial again"/>
 
-    <com.uco.ava.appcv.arucomm.AboutInfo
+    <com.uco.avaappbeta.AboutInfo
         android:key="app_info"
         android:summary="App information"/>
 
