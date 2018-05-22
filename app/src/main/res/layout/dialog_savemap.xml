@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/title_log_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save map log:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"/>
+    <ScrollView
+        android:id="@+id/log_boddy_scr"
+        android:layout_height="220dp"
+        android:layout_width="match_parent">
+            <TextView
+                android:id="@+id/log_text_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                />
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/save_question_rly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/title_save_txt"
+                android:layout_width="368dp"
+                android:layout_height="wrap_content"
+                android:text="Map created"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+            <TextView
+                android:id="@+id/save_boddy_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Do you want to save this map?"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_save_txt"/>
+            <EditText
+                android:id="@+id/save_name_etx"
+                android:layout_height="wrap_content"
+                android:layout_width="368dp"
+                android:text="ArucoMapp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/save_boddy_txt"/>
+            <TextView
+                android:id="@+id/save_map_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:text="Save"
+                android:textColor="@color/colorRedAva"
+                android:textSize="18sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/save_name_etx"/>
+            <TextView
+                android:id="@+id/nosave_map_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:text="No"
+                android:textColor="@color/colorRedAva"
+                android:textSize="18sp"
+                app:layout_constraintRight_toLeftOf="@+id/save_map_btn"
+                app:layout_constraintTop_toBottomOf="@+id/save_name_etx"/>
+
+            <!--<TextView-->
+                <!--android:id="@+id/addMarkers"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="25dp"-->
+                <!--android:text="Add more markers"-->
+                <!--android:textColor="@color/colorRedAva"-->
+                <!--android:textSize="18sp"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/saveName"-->
+                <!--app:layout_constraintLeft_toLeftOf="parent"-->
+                <!--/>-->
+        </android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
+
+</LinearLayout>

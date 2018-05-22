@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:screenOrientation="landscape"
+    android:animateLayoutChanges="true"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"/>
+
+    <org.opencv.android.JavaCameraView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/image_manipulations_activity_surface_view"
+        android:background="#00000000"
+        opencv:show_fps="true"
+        opencv:camera_id="back"
+        android:animateLayoutChanges="true"
+        />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/addsend_clayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/floating_extension_space"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            opencv:layout_constraintRight_toRightOf="parent"
+            opencv:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <ImageButton
+            android:id="@+id/help_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/calib_style"
+            android:src="@drawable/ic_question_help"
+            android:scaleType="fitCenter"
+            opencv:layout_constraintRight_toRightOf="parent"
+            opencv:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:onClick="openTutorial"
+            android:elevation="2dp"
+            android:translationZ="2dp"
+            />
+
+        <ImageButton
+            android:id="@+id/add_calib_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/calib_style"
+            android:src="@drawable/ic_camera_add"
+            android:scaleType="fitCenter"
+            opencv:layout_constraintRight_toRightOf="parent"
+            opencv:layout_constraintBottom_toBottomOf="parent"
+            android:onClick="addMarkerCalib"
+            android:elevation="2dp"
+            android:translationZ="2dp"
+            android:visibility="gone"
+            />
+
+        <ImageButton
+            android:id="@+id/add_mapping_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/calib_style"
+            android:src="@drawable/ic_camera_add"
+            android:scaleType="fitCenter"
+            opencv:layout_constraintRight_toRightOf="parent"
+            opencv:layout_constraintBottom_toBottomOf="parent"
+            android:onClick="addMarkerMapping"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/send_calib_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/calib_style"
+            android:text="Calibrate"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="5dp"
+            opencv:layout_constraintBottom_toBottomOf="parent"
+            opencv:layout_constraintRight_toLeftOf="@id/add_calib_btn"
+            android:onClick="sendCalibrationChecker"
+            android:elevation="2dp"
+            android:translationZ="2dp"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/send_mapping_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/calib_style"
+            android:text="Mapping"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="5dp"
+            opencv:layout_constraintBottom_toBottomOf="parent"
+            opencv:layout_constraintRight_toLeftOf="@id/add_mapping_btn"
+            android:onClick="sendMapingChecker"
+            android:elevation="2dp"
+            android:translationZ="2dp"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/count_bubble"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/count_style"
+            android:text="00"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:textColor="@android:color/white"
+            opencv:layout_constraintRight_toRightOf="parent"
+            opencv:layout_constraintBottom_toBottomOf="parent"
+            android:elevation="2dp"
+            android:translationZ="2dp"
+            android:visibility="gone"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/floating_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            fab:menu_fab_size="normal"
+            fab:menu_showShadow="true"
+            fab:menu_shadowColor="#66000000"
+            fab:menu_shadowRadius="4dp"
+            fab:menu_shadowXOffset="1dp"
+            fab:menu_shadowYOffset="3dp"
+            fab:menu_colorNormal="#DA4336"
+            fab:menu_colorPressed="#E75043"
+            fab:menu_colorRipple="#99FFFFFF"
+            fab:menu_animationDelayPerItem="50"
+            fab:menu_icon="@drawable/ic_menu"
+            fab:menu_buttonSpacing="0dp"
+            fab:menu_labels_margin="0dp"
+            fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+            fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+            fab:menu_labels_paddingTop="4dp"
+            fab:menu_labels_paddingRight="8dp"
+            fab:menu_labels_paddingBottom="4dp"
+            fab:menu_labels_paddingLeft="8dp"
+            fab:menu_labels_padding="8dp"
+            fab:menu_labels_textColor="#FFFFFF"
+            fab:menu_labels_textSize="14sp"
+            fab:menu_labels_cornerRadius="3dp"
+            fab:menu_labels_colorNormal="#333333"
+            fab:menu_labels_colorPressed="#444444"
+            fab:menu_labels_colorRipple="#66FFFFFF"
+            fab:menu_labels_showShadow="true"
+            fab:menu_labels_singleLine="false"
+            fab:menu_labels_ellipsize="none"
+            fab:menu_labels_maxLines="-1"
+            fab:menu_labels_position="right"
+            fab:menu_openDirection="down"
+            fab:menu_backgroundColor="@android:color/transparent"
+            fab:menu_fab_show_animation="@anim/show_from_bottom"
+            fab:menu_fab_hide_animation="@anim/hide_to_bottom">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/setting_fbt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_settings"
+                fab:fab_size="mini"
+                fab:fab_label="App settings"
+                android:onClick="lanzarPreferencias"
+                android:background="#3F51B5"
+                />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/visualiser_opn_fbt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_visualiser"
+                fab:fab_size="mini"
+                fab:fab_label="Open visualiser"
+                android:onClick="visualiser"
+                />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/mapping_fbt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_mapmaker"
+                fab:fab_size="mini"
+                fab:fab_label="Start Mapping"
+                android:onClick="makermapfunction"
+                />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/calib_fbt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_caliper"
+                fab:fab_size="mini"
+                fab:fab_label="Start calibration"
+                android:visibility="visible"
+                android:onClick="calibrationFunction"
+                />
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+
+</FrameLayout>

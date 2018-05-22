@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="markerName">
+        <item name="name1">ARUCO MIP 36h12</item>
+        <item name="name2">ARUCO</item>
+        <item name="name3">ARTOOLKITPLUSBCH</item>
+        <item name="name4">ARTOOLKITPLUS</item>
+        <item name="name5">CHILITAGS</item>
+        <item name="name6">APRIL TAG16h5</item>
+        <item name="name7">APRIL TAG25h7</item>
+        <item name="name8">APRIL TAG25h9</item>
+        <item name="name9">APRIL TAG36h11</item>
+        <item name="name10">APRIL TAG36h10</item>
+        <item name="name11">ARUCO MIP 16h3 </item>
+        <item name="name12">ARUCO MIP 25h7</item>
+    </string-array>
+
+    <string-array name="markerNumber">
+        <item name="number1">ARUCO_MIP_36h12</item>
+        <item name="number2">ARUCO</item>
+        <item name="number3">ARTOOLKITPLUSBCH</item>
+        <item name="number4">ARTOOLKITPLUS</item>
+        <item name="number5">CHILITAGS</item>
+        <item name="number6">TAG16h5</item>
+        <item name="number7">TAG25h7</item>
+        <item name="number8">TAG25h9</item>
+        <item name="number9">TAG36h11</item>
+        <item name="number10">TAG36h10</item>
+        <item name="number11">ARUCO_MIP_16h3</item>
+        <item name="number12">ARUCO_MIP_25h7</item>
+    </string-array>
+
+    <string name="defaultMarker">ARUCO_MIP_36h12</string>
+</resources>

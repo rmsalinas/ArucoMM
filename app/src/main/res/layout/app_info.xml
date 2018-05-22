@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_margin="7dp"
+        android:layout_gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/uco_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/UcoURL"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:id="@+id/copyright_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:text="Version 1.0.0 ©2018 All rights reserved"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:id="@+id/author_fran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:text="Author: Francisco J. Maestre García"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        />
+    <TextView
+        android:id="@+id/email_fran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="3dp"
+        android:text="@string/email"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        android:autoLink="email"
+        />
+
+    <TextView
+        android:id="@+id/author_ra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:text="Rafael Muñoz Salinas"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        />
+    <TextView
+        android:id="@+id/email_ava"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="7dp"
+        android:text="@string/email_ava"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        android:autoLink="email"
+        />
+
+    <TextView
+        android:id="@+id/prueba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Resources"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/aruco_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ArucoURL"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" | "
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/marker_mapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/MapperURL"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" | "
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"
+            />
+        <TextView
+            android:id="@+id/floating_menu_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/FloatingActionButtonURL"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" | "
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/tuto_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/materialIntroURL"
+            android:textSize="15sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" | "
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/apache_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ApacheURL"
+            android:textSize="15sp"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

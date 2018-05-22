@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="preferencias_principal" >
+    <PreferenceCategory  android:title="Resolution"/>
+
+    <com.uco.ava.appcv.arucomm.AvailableResolutions
+        android:key="resolucion"
+        android:title="Available resolutions"
+        android:summary="Choose a camera resolution"
+        android:defaultValue="1"/>
+
+    <PreferenceCategory android:title="Markers"/>
+
+    <ListPreference
+        android:key="marcador"
+        android:title="Markers"
+        android:summary="Available markers to detect"
+        android:entries="@array/markerName"
+        android:entryValues="@array/markerNumber"
+        android:defaultValue="@string/defaultMarker"
+        android:negativeButtonText="Cancel"
+        android:positiveButtonText="Accept"/>
+
+    <EditTextPreference
+        android:key="markersizeCalib"
+        android:title="Calibration Marker size"
+        android:summary="Size of the markers you are using"
+        android:inputType="numberDecimal"
+        android:defaultValue="1"
+        android:negativeButtonText="Cancel"
+        android:positiveButtonText="Ok"
+        android:imeOptions="flagNoExtractUi"/>
+
+    <EditTextPreference
+        android:key="markersizeMap"
+        android:title="Mapping Marker size"
+        android:summary="Size of the markers you are using"
+        android:inputType="numberDecimal"
+        android:defaultValue="1"
+        android:negativeButtonText="Cancel"
+        android:positiveButtonText="Ok"
+        android:imeOptions="flagNoExtractUi"/>
+
+    <PreferenceCategory android:title="Utilities"/>
+
+    <CheckBoxPreference
+        android:key="help_button"
+        android:title="Show help button"
+        android:summary="If is true, the help button is always visible.."
+        android:defaultValue="true"
+        />
+
+    <com.uco.ava.appcv.arucomm.SendParamsFile
+        android:key="calibrated_resolutions"
+        android:title="Calibrated resolutions"
+        android:summary="Read and send camera parametres of calibrated resolutions"
+        android:defaultValue="1"/>
+
+    <com.uco.ava.appcv.arucomm.SendTestFiles
+        android:title="Get necessary files"
+        android:summary="Open calibration grid and markers images"/>
+
+    <com.uco.ava.appcv.arucomm.OpenTutorial
+        android:title="Open tutorial"
+        android:summary="If you have forgotten something, you can see tutorial again"/>
+
+    <com.uco.ava.appcv.arucomm.AboutInfo
+        android:key="app_info"
+        android:summary="App information"/>
+
+</PreferenceScreen>

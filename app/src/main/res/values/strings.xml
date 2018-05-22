@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aruco MarkerMapper</string>
+    <string name="email"><a href="frajamagar@gmail.com">frajamagar@gmail.com</a></string>
+    <string name="email_ava"><a href="ava@uco.es">ava@uco.es</a></string>
+
+
+    <string name="UcoURL">                  <a href="http://www.uco.es">                                                    Universidad de Córdoba (Uco)</a></string>
+    <string name="MapperURL">               <a href="http://www.uco.es/investiga/grupos/ava/node/57">                       MarkerMapper</a></string>
+    <string name="ArucoURL">                <a href="https://www.uco.es/investiga/grupos/ava/node/26">                      ArUco</a></string>
+    <string name="FloatingActionButtonURL"> <a href="https://github.com/Clans/FloatingActionButton">                        Menu</a></string>
+    <string name="materialIntroURL">        <a href="https://github.com/HeinrichReimer/material-intro#navigate-to-slides">  Tuto</a></string>
+    <string name="ApacheURL">               <a href="https://www.apache.org/licenses/LICENSE-2.0">                          Apache</a></string>
+
+    <string name="print_files">
+        1. Print the calibration grid and marker images.\n
+        2. Cut out several markers to use later.\n
+        3. Keep the calibration grid complete.\n
+        4. Start using the app!!!\n
+    </string>
+
+    <string name="marker_type">
+        From app setting, you can choose the type of marker you are going to use.\n
+    </string>
+
+    <string name="calib_body">
+        1. Open the app menu and press the calibration button.\n
+        2. Take some pictures of the calibration grid from different angles.\n
+        3. At the end of this process, you could see a confirmation message and the accuracy error.\n
+        4. TIP: Each resolution available on your device needs to be calibrated.\n
+    </string>
+
+    <string name="marker_first">
+        1. Place your markers where you want, even in the angle you want: on the floor, on the table, on the wall, on your monitor…\n
+        2. Make sure the camera is already calibrated.\n
+    </string>
+
+    <string name="marker_body">
+        1. Open the app menu and press the mapping button.\n
+        2. Take photos of the markers.\n
+        3. Every picture should contain at least two markers.\n
+        4. You must connect new markers with markers previously captured.\n
+        5. Once all the markers are captured, you can create the map.\n
+    </string>
+
+    <string name="visualiser_body">
+        You can open and view the created maps using the visualiser.
+    </string>
+
+    <string name="visualiser_control">
+        Use these movements to control the visualiser.
+    </string>
+
+    <string name="visualiser_options">
+        You have several options to manage your maps, including sending maps to external devices.
+    </string>
+
+    <string name="tester_body">
+        You can start the cube tester from the  b visualiser screen to evaluate the created map.\n
+        Make sure that the markers are still placed in the same position as in the opened map.\n
+    </string>
+
+
+</resources>

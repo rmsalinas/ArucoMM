@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.uco.ava.appcv.arucomm">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front.autofocus"
+        android:required="false" />
+
+
+    <application
+        android:icon="@mipmap/ic_app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".FirstActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".MaterialIntro"
+            android:theme="@style/Theme.Intro"
+            android:screenOrientation="landscape"
+            />
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+
+            <!-- android:label="@string/app_name" -->
+            <!-- android:screenOrientation="landscape" -->
+            <!-- android:configChanges="keyboardHidden|orientation"> -->
+
+        </activity>
+        <activity
+            android:name=".PreferenciasActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape">
+        </activity>
+
+
+        <activity android:name=".bbdd.dbCreatorActivity" />
+        <activity android:name=".RequestPermissionActivity" />
+        <activity
+            android:name=".VisualiserActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        </activity>
+
+
+    </application>
+
+
+
+
+
+</manifest>

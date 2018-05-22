@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DA4336</color>
+    <color name="colorPrimaryDark">#D03429</color>
+    <color name="colorPrimaryLight">#e57b72</color>
+    <color name="colorAccent">#E57B72</color>
+    <color name="colorRedAva">#DA4336</color>
+
+    <color name="colorBoobleYellow">#FC9F0D</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorRedDark">#D32F2F</color>
+
+
+    <color name="colorGreenLight">#81c784</color>
+    <color name="colorGreenDark">#519657</color>
+
+    <color name="colorBlueLight">#4B82AB</color>
+    <color name="colorBlueDark">#33546C</color>
+
+    <color name="colorBrownLight">#795548</color>
+    <color name="colorBrownDark">#5D4037</color>
+
+    <color name="colorLimeLight">#80deea</color>
+    <color name="colorLimeDark">#4bacb8</color>
+
+    <color name="colorPurpleLight">#8A56D2</color>
+    <color name="colorPurpleDark">#6A36B2</color>
+
+    <color name="colorBlueGreyLight">#607D8B</color>
+    <color name="colorBlueGreyDark">#455A64</color>
+
+    <color name="colorGreyLight">#979797</color>
+    <color name="colorGreyDark">#636363</color>
+
+    <color name="colorOrangeLight">#ff7043</color>
+    <color name="colorOrangeDark">#c63f17</color>
+
+    <color name="colorPinkLight">#009688</color>
+    <color name="colorPinkDark">#00796B</color>
+
+</resources>
