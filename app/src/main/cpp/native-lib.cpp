@@ -527,7 +527,7 @@ extern "C" {
 /**MainActivity JNI functions*/
 
 JNIEXPORT jstring JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_stringFromJNI
+Java_com_uco_avaappbeta_MainActivity_stringFromJNI
         (JNIEnv *env, jobject instance) {
 
     string s("Escribir un mensaje cualquiera");
@@ -539,7 +539,7 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_stringFromJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_markerDetectionJNI
+Java_com_uco_avaappbeta_MainActivity_markerDetectionJNI
         (JNIEnv *env, jobject,
          jlong addrRgba, jstring markerJstr){
 
@@ -550,7 +550,7 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_markerDetectionJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_drawMarkerJNI
+Java_com_uco_avaappbeta_MainActivity_drawMarkerJNI
         (JNIEnv *env, jobject,
          jlong addrRgba){
 
@@ -561,13 +561,13 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_drawMarkerJNI
 
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_storeMarkersDetectionJNI
+Java_com_uco_avaappbeta_MainActivity_storeMarkersDetectionJNI
         (JNIEnv *env, jobject){
     MyData::singleton()->contMarkerList.push_back(MyData::singleton()->frameMarkers);
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_setCurrentCameraParametersJNI
+Java_com_uco_avaappbeta_MainActivity_setCurrentCameraParametersJNI
         (JNIEnv *env, jobject,
          jstring jparams){
 
@@ -576,7 +576,7 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_setCurrentCameraParametersJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_setCurrentResolutionJNI
+Java_com_uco_avaappbeta_MainActivity_setCurrentResolutionJNI
         (JNIEnv *env, jobject,
          jint width, jint height){
 
@@ -584,7 +584,7 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_setCurrentResolutionJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_setMarkerSizeJNI
+Java_com_uco_avaappbeta_MainActivity_setMarkerSizeJNI
         (JNIEnv *env, jobject,
          jfloat jsize){
     MyData::setMarkerSize(jsize);
@@ -592,7 +592,7 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_setMarkerSizeJNI
 
 
 JNIEXPORT long JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_markerListJNI
+Java_com_uco_avaappbeta_MainActivity_markerListJNI
         (JNIEnv*, jobject){
 
     if (!MyData::singleton()->frameMarkers.empty())
@@ -602,7 +602,7 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_markerListJNI
 }
 
 JNIEXPORT jobjectArray JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_maperListJNI
+Java_com_uco_avaappbeta_MainActivity_maperListJNI
         (JNIEnv *env, jobject){
 
     aruco_mm::debug::Debug::setLevel(5);
@@ -631,7 +631,7 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_maperListJNI
 }
 
 JNIEXPORT jobjectArray JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_calibrationJNI
+Java_com_uco_avaappbeta_MainActivity_calibrationJNI
         (JNIEnv *env, jobject instance,
          jint width, jint height){
 
@@ -663,7 +663,7 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_calibrationJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_cleanListJNI
+Java_com_uco_avaappbeta_MainActivity_cleanListJNI
         (JNIEnv *env, jobject){
 
     //se limpia la lista de marcadores para la siguiente calibración
@@ -671,14 +671,14 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_cleanListJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_cleanMaperlistJNI
+Java_com_uco_avaappbeta_MainActivity_cleanMaperlistJNI
         (JNIEnv *env, jobject){
 
     MyData::singleton()->maperlist.clear();
 }
 
 JNIEXPORT long JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_addMoreMarkersJNI
+Java_com_uco_avaappbeta_MainActivity_addMoreMarkersJNI
         (JNIEnv *env, jobject){
 
     //adañir process para todos los marcadores de maperlist
@@ -689,7 +689,7 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_addMoreMarkersJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_mapingJNI
+Java_com_uco_avaappbeta_MainActivity_mapingJNI
         (JNIEnv *env, jobject) {
 
     //Si no hay un hilo para mapear creado
@@ -706,7 +706,7 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_mapingJNI
 }
 
 JNIEXPORT jobjectArray JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_isOptimizationFinishedJNI
+Java_com_uco_avaappbeta_MainActivity_isOptimizationFinishedJNI
         (JNIEnv *env, jobject) {
 
     bool finished = false;
@@ -730,7 +730,7 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_isOptimizationFinishedJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_savecurrentMarkerMapJNI
+Java_com_uco_avaappbeta_MainActivity_savecurrentMarkerMapJNI
         (JNIEnv *env, jobject,
          jstring jparams) {
 
@@ -739,7 +739,7 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_savecurrentMarkerMapJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_saveCameraParamsJNI
+Java_com_uco_avaappbeta_MainActivity_saveCameraParamsJNI
         (JNIEnv *env, jobject,
          jstring jparams){
 
@@ -749,7 +749,7 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_saveCameraParamsJNI
 
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_setMarkerDictionaryJNI
+Java_com_uco_avaappbeta_MainActivity_setMarkerDictionaryJNI
         (JNIEnv *env, jobject,
          jstring jparams){
 
@@ -758,14 +758,14 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_setMarkerDictionaryJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_createMarkerMapperMarkerJNI
+Java_com_uco_avaappbeta_MainActivity_createMarkerMapperMarkerJNI
         (JNIEnv *env, jobject ) {
 
     MyData::singleton()->createMarkerMapper();
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_cubeDrawJNI
+Java_com_uco_avaappbeta_MainActivity_cubeDrawJNI
         (JNIEnv *env, jobject,
          jlong addrRgba){
 
@@ -778,7 +778,7 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_cubeDrawJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_markersToFileJNI
+Java_com_uco_avaappbeta_MainActivity_markersToFileJNI
         (JNIEnv *env, jobject, jstring jpath) {
 
     string path = ConvertJString(env, jpath);
@@ -787,7 +787,7 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_markersToFileJNI
 
 
 JNIEXPORT jstring JNICALL
-Java_com_uco_ava_appcv_arucomm_MainActivity_markersFromFileJNI
+Java_com_uco_avaappbeta_MainActivity_markersFromFileJNI
         (JNIEnv *env, jobject, jstring jpath) {
 
     string path = ConvertJString(env, jpath);
@@ -802,7 +802,7 @@ Java_com_uco_ava_appcv_arucomm_MainActivity_markersFromFileJNI
 
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_VisualiserActivity_zoomJNI
+Java_com_uco_avaappbeta_VisualiserActivity_zoomJNI
         (JNIEnv *env, jobject,
          jfloat value) {
 
@@ -810,7 +810,7 @@ Java_com_uco_ava_appcv_arucomm_VisualiserActivity_zoomJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_VisualiserActivity_rotateJNI
+Java_com_uco_avaappbeta_VisualiserActivity_rotateJNI
         (JNIEnv *env, jobject,
          jfloat x, jfloat y) {
 
@@ -818,7 +818,7 @@ Java_com_uco_ava_appcv_arucomm_VisualiserActivity_rotateJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_VisualiserActivity_translateJNI
+Java_com_uco_avaappbeta_VisualiserActivity_translateJNI
         (JNIEnv *env, jobject,
          jfloat x, jfloat y) {
 
@@ -826,7 +826,7 @@ Java_com_uco_ava_appcv_arucomm_VisualiserActivity_translateJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_VisualiserActivity_setDrawerParamsJNI
+Java_com_uco_avaappbeta_VisualiserActivity_setDrawerParamsJNI
         (JNIEnv *env, jobject,
          jint w, jint h, jstring jpath) {
 
@@ -836,7 +836,7 @@ Java_com_uco_ava_appcv_arucomm_VisualiserActivity_setDrawerParamsJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_VisualiserActivity_dawerDrawJNI
+Java_com_uco_avaappbeta_VisualiserActivity_dawerDrawJNI
         (JNIEnv *env, jobject, jlong ntvImage, jint showNumbers) {
 
     Mat &image = *(Mat *) ntvImage;
@@ -844,7 +844,7 @@ Java_com_uco_ava_appcv_arucomm_VisualiserActivity_dawerDrawJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_VisualiserActivity_setCubeParamsJNI
+Java_com_uco_avaappbeta_VisualiserActivity_setCubeParamsJNI
         (JNIEnv *env, jobject, jstring jpath) {
 
     string path = ConvertJString( env, jpath);
@@ -859,7 +859,7 @@ Java_com_uco_ava_appcv_arucomm_VisualiserActivity_setCubeParamsJNI
 /**myPreferenceList JNI functions*/
 
 JNIEXPORT jstring JNICALL
-Java_com_uco_ava_appcv_arucomm_SendParamsFile_paramsToCompleteString
+Java_com_uco_avaappbeta_SendParamsFile_paramsToCompleteString
         (JNIEnv *env, jobject,
          jstring jparams) {
 
@@ -870,7 +870,7 @@ Java_com_uco_ava_appcv_arucomm_SendParamsFile_paramsToCompleteString
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_SendParamsFile_saveCameraParamsJNI
+Java_com_uco_avaappbeta_SendParamsFile_saveCameraParamsJNI
         (JNIEnv *env, jobject,
          jstring jparams, jstring jpath){
 
@@ -884,7 +884,7 @@ Java_com_uco_ava_appcv_arucomm_SendParamsFile_saveCameraParamsJNI
 
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_RealTime_zoomJNI
+Java_com_uco_avaappbeta_RealTime_zoomJNI
         (JNIEnv *env, jobject,
          jfloat value) {
 
@@ -892,7 +892,7 @@ Java_com_uco_ava_appcv_arucomm_RealTime_zoomJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_RealTime_rotateJNI
+Java_com_uco_avaappbeta_RealTime_rotateJNI
         (JNIEnv *env, jobject,
          jfloat x, jfloat y) {
 
@@ -900,7 +900,7 @@ Java_com_uco_ava_appcv_arucomm_RealTime_rotateJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_RealTime_translateJNI
+Java_com_uco_avaappbeta_RealTime_translateJNI
         (JNIEnv *env, jobject,
          jfloat x, jfloat y) {
 
@@ -908,7 +908,7 @@ Java_com_uco_ava_appcv_arucomm_RealTime_translateJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_RealTime_setDrawerParamsJNI
+Java_com_uco_avaappbeta_RealTime_setDrawerParamsJNI
         (JNIEnv *env, jobject,
          jint w, jint h, jstring jpath) {
 
@@ -918,7 +918,7 @@ Java_com_uco_ava_appcv_arucomm_RealTime_setDrawerParamsJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_RealTime_dawerDrawJNI
+Java_com_uco_avaappbeta_RealTime_dawerDrawJNI
         (JNIEnv *env, jobject, jlong ntvImage, jint showNumbers) {
 
     Mat &image = *(Mat *) ntvImage;
@@ -926,7 +926,7 @@ Java_com_uco_ava_appcv_arucomm_RealTime_dawerDrawJNI
 }
 
 JNIEXPORT void JNICALL
-Java_com_uco_ava_appcv_arucomm_RealTime_setCubeParamsJNI
+Java_com_uco_avaappbeta_RealTime_setCubeParamsJNI
         (JNIEnv *env, jobject, jstring jpath) {
 
     string path = ConvertJString( env, jpath);
