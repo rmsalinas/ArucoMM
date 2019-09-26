@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone">
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
@@ -92,7 +92,7 @@
                 <!--app:layout_constraintTop_toBottomOf="@+id/saveName"-->
                 <!--app:layout_constraintLeft_toLeftOf="parent"-->
                 <!--/>-->
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </RelativeLayout>
 
 </LinearLayout>

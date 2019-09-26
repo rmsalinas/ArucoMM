@@ -13,7 +13,7 @@
 
 using namespace std;
 using namespace cv;
-using namespace  aruco;
+using namespace aruco;
 
 template<typename T>
 std::string _to_string(const T& i){ std::stringstream str;str<<i;return str.str();};

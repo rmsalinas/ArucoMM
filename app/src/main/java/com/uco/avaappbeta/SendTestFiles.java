@@ -94,8 +94,6 @@ class SendTestFiles extends DialogPreference {
                     in.close();
                     out.close();
                 }
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -171,8 +169,6 @@ class SendTestFiles extends DialogPreference {
                                 in.close();
                                 out.close();
                             }
-                        } catch (FileNotFoundException e) {
-                            e.printStackTrace();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }

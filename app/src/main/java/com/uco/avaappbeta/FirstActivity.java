@@ -5,8 +5,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -88,21 +88,21 @@ public class FirstActivity extends AppCompatActivity {
      * @param data
      */
     @Override
-    protected void onActivityResult (int requestCode, int resultCode, Intent data){
+    protected void onActivityResult (int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == 987) {
             if (resultCode == RESULT_OK) {
-                permissionCamera=true;
+                permissionCamera = true;
             } else if (resultCode == RESULT_CANCELED) {
-                permissionCamera=false;
-
+                permissionCamera = false;
             }
         }
         if (requestCode == 123) {
             if (resultCode == RESULT_OK) {
-                permissionWriteStorage=true;
+                permissionWriteStorage = true;
             } else if (resultCode == RESULT_CANCELED) {
-                permissionWriteStorage=false;
+                permissionWriteStorage = false;
             }
         }
 
@@ -139,7 +139,7 @@ public class FirstActivity extends AppCompatActivity {
             SharedPreferences.Editor editor;
             editor = pref.edit();
             editor.putBoolean("firstRun", false);
-            editor.commit();
+            editor.apply();
             Log.i("nextActivity", "dbCreator");
             intent = new Intent(this, dbCreatorActivity.class);
             startActivity(intent);

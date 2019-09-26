@@ -192,8 +192,6 @@ public class MaterialIntro extends IntroActivity {
                     in.close();
                     out.close();
                 }
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -266,8 +264,6 @@ public class MaterialIntro extends IntroActivity {
                                 in.close();
                                 out.close();
                             }
-                        } catch (FileNotFoundException e) {
-                            e.printStackTrace();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
