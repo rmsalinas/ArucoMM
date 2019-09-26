@@ -5,9 +5,11 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
+
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AlertDialog;
 import android.util.Log;
 
 public class RequestPermissionActivity extends Activity {
@@ -91,7 +93,7 @@ public class RequestPermissionActivity extends Activity {
      * @param grantResults  - The grant results for the corresponding permissions which is either PERMISSION_GRANTED or PERMISSION_DENIED.
      */
     @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode == SOLICITUD_PERMISO) {
             if (grantResults.length== 1 &&
                     grantResults[0] == PackageManager.PERMISSION_GRANTED) {

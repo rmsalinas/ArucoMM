@@ -26,12 +26,12 @@
         android:animateLayoutChanges="true"
         />
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/addsend_clayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginEnd="10dp">
 
         <TextView
             android:id="@+id/floating_extension_space"
@@ -91,7 +91,7 @@
             android:background="@drawable/calib_style"
             android:text="Calibrate"
             android:textColor="@android:color/white"
-            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
             opencv:layout_constraintBottom_toBottomOf="parent"
             opencv:layout_constraintRight_toLeftOf="@id/add_calib_btn"
             android:onClick="sendCalibrationChecker"
@@ -107,7 +107,7 @@
             android:background="@drawable/calib_style"
             android:text="Mapping"
             android:textColor="@android:color/white"
-            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
             opencv:layout_constraintBottom_toBottomOf="parent"
             opencv:layout_constraintRight_toLeftOf="@id/add_mapping_btn"
             android:onClick="sendMapingChecker"
@@ -120,12 +120,12 @@
             android:id="@+id/count_bubble"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_marginRight="36dp"
+            android:layout_marginEnd="36dp"
             android:layout_marginBottom="36dp"
             android:background="@drawable/count_style"
             android:text="00"
             android:textStyle="bold"
-            android:textSize="14dp"
+            android:textSize="14sp"
             android:textColor="@android:color/white"
             opencv:layout_constraintRight_toRightOf="parent"
             opencv:layout_constraintBottom_toBottomOf="parent"
@@ -134,14 +134,14 @@
             android:visibility="gone"
             />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.github.clans.fab.FloatingActionMenu
             android:id="@+id/floating_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             fab:menu_fab_size="normal"
             fab:menu_showShadow="true"
             fab:menu_shadowColor="#66000000"

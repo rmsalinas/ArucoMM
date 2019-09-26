@@ -1,7 +1,7 @@
 package com.uco.avaappbeta;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Created by fran on 19/07/17.

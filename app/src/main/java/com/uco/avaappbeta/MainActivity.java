@@ -81,16 +81,16 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
     private Size mSize0;
     private Mat mIntermediateMat;
     private Mat mMat0;
-    private MatOfInt mChannels[];
+    private MatOfInt[] mChannels;
     private MatOfInt mHistSize;
     private int mHistSizeNum = 25;
     private MatOfFloat mRanges;
-    private Scalar mColorsRGB[];
-    private Scalar mColorsHue[];
+    private Scalar[] mColorsRGB;
+    private Scalar[] mColorsHue;
     private Scalar mWhilte;
     private Point mP1;
     private Point mP2;
-    private float mBuff[];
+    private float[] mBuff;
     private Mat mSepiaKernel;
 
     private boolean doubleBackToExitPressedOnce = false, cameraCalibrated = false,
@@ -292,7 +292,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
 
         markersizestr = pref.getString("markersize", "1");
 
-        setMarkerSizeJNI(Float.valueOf(markersizestr));
+        setMarkerSizeJNI(Float.parseFloat(markersizestr));
         floatMenu.close(true);
 
         VIEW_HELP_BTN = pref.getBoolean("help_button", true);
@@ -479,11 +479,11 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
         final ArrayList<Integer> mSelectedItems = new ArrayList<Integer>();  // Where we track the selected items
 
 
-        final String[] names = new String[2];;
+        final String[] names = new String[2];
         names[0] = "Calibration grid";
         names[1] = "Markers images";
 
-        final String[] file = new String[2];;
+        final String[] file = new String[2];
         file[0] = gridName;
         file[1] = fileName;
 
@@ -538,8 +538,6 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
                             in.close();
                             out.close();
                         }
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -657,10 +655,10 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
         } else if (MaperBool) {
 
             int picCalib_prev = picCalib;
-            String TamYErr[] = maperListJNI();
+            String[] TamYErr = maperListJNI();
             final String msg = TamYErr[1];
 
-            picCalib = Integer.valueOf(TamYErr[0]);
+            picCalib = Integer.parseInt(TamYErr[0]);
 
             if (!TamYErr[1].isEmpty()) {
                 runOnUiThread(new Runnable() {
@@ -744,7 +742,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
                         setButton(calibMode);
 
                         messenger("Calibration started\nTake some images to calibrate");
-                        setMarkerSizeJNI(Float.valueOf(markersizestr));
+                        setMarkerSizeJNI(Float.parseFloat(markersizestr));
                         editor.putString("markersizeCalib", markersizestr);
                         editor.commit();
                     }
@@ -766,7 +764,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
         if (!size.isEmpty() &&
                 !size.toString().startsWith(".") &&
                 !size.toString().startsWith(",") &&
-                Float.valueOf(size) > 0 ){
+                Float.parseFloat(size) > 0 ){
             return true;
         }
         else
@@ -860,7 +858,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
                             markersizestr = markerSizeDialog.getText().toString().trim();
                             markerSizeDialog.setText(markersizestr);
 
-                            setMarkerSizeJNI(Float.valueOf(markersizestr));
+                            setMarkerSizeJNI(Float.parseFloat(markersizestr));
                             editor.putString("markersizeMap", markersizestr);
                             editor.commit();
                             messenger("Mapping started\nTake several images to map");
@@ -1436,12 +1434,12 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
     final Handler mapdler = new Handler();
     final Runnable runmaple = new Runnable() {
         public void run() {
-            String solutions []= isOptimizationFinishedJNI();
+            String[] solutions = isOptimizationFinishedJNI();
             final ScrollView scroll = (ScrollView) mview.findViewById(R.id.log_boddy_scr);
 
             logText.append(solutions[1]);
 
-            if(Integer.valueOf(solutions[0])==1){ // just remove call backs
+            if(Integer.parseInt(solutions[0])==1){ // just remove call backs
                 mapdler.removeCallbacks(null);
                 logText.append("Finished!");
 

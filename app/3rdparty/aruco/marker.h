@@ -175,7 +175,7 @@ or implied, of Rafael Muñoz Salinas.
         // returns the 3d points of a marker wrt its center
         static vector<cv::Point3f> get3DPoints(float msize);
         //returns the 3d points of this marker wrt its center
-          inline vector<cv::Point3f> get3DPoints()const{
+          inline vector<cv::Point3f> get3DPoints() const{
               return get3DPoints(ssize);
           }
 

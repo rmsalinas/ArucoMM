@@ -1,5 +1,7 @@
 package com.uco.avaappbeta.bbdd;
 
+import androidx.annotation.NonNull;
+
 /**
  * Created by FJMaestre on 16/10/17.
  */
@@ -85,6 +87,7 @@ public class CalibrationClass {
 
 
     @Override
+    @NonNull
     public String toString() {
         return  "\nid=" + id +
                 ",\nwidth=" + width +

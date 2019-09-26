@@ -350,9 +350,6 @@ public class VisualiserActivity extends Activity implements View.OnTouchListener
                 fingers--;
                 break;
 
-            case MotionEvent.ACTION_CANCEL:
-                break;
-
             case MotionEvent.ACTION_POINTER_DOWN:
                 fingers++;
                 canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.MULTIPLY);
@@ -424,6 +421,8 @@ public class VisualiserActivity extends Activity implements View.OnTouchListener
                     }
                 }
                 break;
+
+            case MotionEvent.ACTION_CANCEL:
             default:
                 break;
         }
